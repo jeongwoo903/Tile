@@ -1,0 +1,67 @@
+$tileColor: #ffd466;
+$svgColor: #ff1e56;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $svgColor;
+    flex-direction: column;
+
+    .wrapper {
+        border: 1rem solid $tileColor;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: .3rem;
+        padding: 2rem;
+
+        @media screen and (max-width: 1024px),
+        (max-height: 968px) {
+            border: .7rem solid $tileColor;
+            gap: .27rem;
+            padding: 1.5rem;
+        }
+
+        @media screen and (max-width: 768px),
+        (max-height: 768px) {
+            border: .5rem solid $tileColor;
+            gap: .2rem;
+            padding: .8rem;
+        }
+
+        .tile {
+            border-radius: 3px;
+            width: 6rem;
+            height: 6rem;
+            background-color: $tileColor;
+
+            @media screen and (max-width: 1024px),
+            (max-height: 968px) {
+                width: 4rem;
+                height: 4rem;
+            }
+
+            @media screen and (max-width: 768px),
+            (max-height: 768px) {
+                border-radius: 1px;
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+    }
+
+    .tistory {
+        margin-top: .5rem;
+    }
+}
